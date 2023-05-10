@@ -223,7 +223,38 @@ for (let i = 1; i <= n4; i++) {
 	}
 }
 console.log("Tổng các số chia hết cho 3 từ 1 đến " + n4 + " là: " + sum3);
+/*Vòng for lồng nhau
+Vòng lặp for có thể được lồng nhau bên trong vòng lặp khác.
+Cú pháp:
+for (initialization; condition; increment/decrement) {
+  // code to be executed
+  for (initialization; condition; increment/decrement) {
+    // code to be executed
+  }
+}
+Giải thích:
+  initialization: Khởi tạo giá trị đầu tiên cho biến.
+  condition: Điều kiện để vòng lặp được thực thi.
+  increment/decrement: Tăng hoặc giảm giá trị của biến sau mỗi lần thực hiện vòng lặp.
+  code to be executed: Mã để thực thi mỗi lần vòng lặp được thực hiện. */
+//Ví dụ:
+for (let i = 0; i < 10; i++) {
+  console.log("Vòng lặp ngoài: " + i);
+  for (let j = 0; j < 10; j++) {
+    console.log("Vòng lặp trong: " + j);
+  }
+}
+//Task10. Giải câu đố "vừa gà vừa chó,bó lại cho trong, 36 con, 100 chân"
+//Viết chương trình tìm ra số con gà và số con chó.
+//Gợi ý: Sử dụng vòng lặp lồng nhau.
 
+//Task11. Viết chương trình yêu cầu người dùng nhập vào một số nguyên n.
+//Sau đó, in ra màn hình bảng cửu chương từ 1 đến n.
+
+//Task12. Viết chương trình yêu cầu người dùng nhập vào một số nguyên n.
+//Sau đó, in ra màn hình bảng cửu chương của n.
+
+//Task13. Viết chương trình in ra bảng cửu chương từ 1 đến 10.
 
 
 
