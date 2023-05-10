@@ -73,63 +73,13 @@ switch (day) {
 }
 
 //Task1. Viết chương trình nhập vào một số, kiểm tra và in ra số đó là số chẵn hay lẻ.
-var number = prompt("Nhập vào một số: ");
-if (number % 2 == 0) {
-  console.log("Số " + number + " là số chẵn");
-} else {
-  console.log("Số " + number + " là số lẻ");
-}
+
 //Task2. Viết chương trình nhập vào một số, kiểm tra và in ra số đó là số âm hay dương.
-var number = prompt("Nhập vào một số: ");
-if (number > 0) {
-  console.log("Số " + number + " là số dương");
-} else if (number < 0) {
-	console.log("Số " + number + " là số âm");
-} else {
-	console.log("Số " + number + " là số 0");
-}
+
 //Task3. Dùng switch/case để viết chương trình nhập vào một số, kiểm tra và in ra số đó là số chẵn hay lẻ.
-var number = prompt("Nhập vào một số: ");
-switch (number % 2) {
-	  case 0:
-	    console.log("Số " + number + " là số chẵn");
-	    break;
-	  case 1:
-	    console.log("Số " + number + " là số lẻ");
-	    break;
-	  default:
-	    console.log("Số " + number + " không phải là số chẵn hoặc lẻ");
-	    break;
-}
+
 //Task4.Viết một chương trình yêu cầu người dùng nhập vào một số nguyên từ 1 đến 7. 
 //Chương trình sẽ trả về ngày tương ứng trong tuần với số được nhập vào. Sử dụng switch case để giải quyết bài tập này.
-let dayOfWeek = parseInt(prompt("Nhập vào một số nguyên từ 1 đến 7 để xem ngày trong tuần: "));
-switch (dayOfWeek) {
-  case 1:
-    console.log("Hôm nay là Chủ Nhật");
-    break;
-  case 2:
-    console.log("Hôm nay là Thứ Hai");
-    break;
-  case 3:
-    console.log("Hôm nay là Thứ Ba");
-    break;
-  case 4:
-    console.log("Hôm nay là Thứ Tư");
-    break;
-  case 5:
-    console.log("Hôm nay là Thứ Năm");
-    break;
-  case 6:
-    console.log("Hôm nay là Thứ Sáu");
-    break;
-  case 7:
-    console.log("Hôm nay là Thứ Bảy");
-    break;
-  default:
-    console.log("Bạn đã nhập số không hợp lệ");
-    break;
-}
 
 /*JavaScript cung cấp ba loại vòng lặp khác nhau: for, while, và do...while.
 Dưới đây là cú pháp và giải thích về cách sử dụng các loại vòng lặp này: */
@@ -180,49 +130,19 @@ do {
 
 //Task5. Viết chương trình yêu cầu người dùng nhập vào một số nguyên n.
 //Sau đó, in ra màn hình các số từ 1 đến n.
-let n = parseInt(prompt("Nhập vào một số nguyên n: "));
-for (let i = 1; i <= n; i++) {
-	console.log(i);
-}
+
 //Task6. Viết chương trình yêu cầu người dùng nhập vào một số nguyên n.
 //Sau đó in ra tổng các số từ 1 đến n.
-let n1 = parseInt(prompt("Nhập vào một số nguyên n: "));
-let sum = 0;
-for (let i = 1; i <= n1; i++) {
-	sum += i;
-}
 
-console.log("Tổng các số từ 1 đến " + n1 + " là: " + sum);
 //Task7. Viết chương trình yêu cầu người dùng nhập vào một số nguyên n.
 //Sau đó, in ra tổng các số lẻ từ 1 đến n.
-let n2 = parseInt(prompt("Nhập vào một số nguyên n: "));
-let sum1 = 0;
-for (let i = 1; i <= n2; i++) {
-	if (i % 2 == 1) {
-		sum1 += i;
-	}
-}
-console.log("Tổng các số lẻ từ 1 đến " + n2 + " là: " + sum1);
+
 //Task8. Viết chương trình yêu cầu người dùng nhập vào một số nguyên n.
 //Sau đó, in ra tổng các số chẵn từ 1 đến n.
-let n3 = parseInt(prompt("Nhập vào một số nguyên n: "));
-let sum2 = 0;
-for (let i = 1; i <= n3; i++) {
-	if (i % 2 == 0) {
-		sum2 += i;
-	}
-}
-console.log("Tổng các số chẵn từ 1 đến " + n3 + " là: " + sum2);
+
 //Task9. Viết chương trình yêu cầu người dùng nhập vào một số nguyên n.
 //Sau đó, in ra tổng các số chia hết cho 3 từ 1 đến n.
-let n4 = parseInt(prompt("Nhập vào một số nguyên n: "));
-let sum3 = 0;
-for (let i = 1; i <= n4; i++) {
-	if (i % 3 == 0) {
-		sum3 += i;
-	}
-}
-console.log("Tổng các số chia hết cho 3 từ 1 đến " + n4 + " là: " + sum3);
+
 /*Vòng for lồng nhau
 Vòng lặp for có thể được lồng nhau bên trong vòng lặp khác.
 Cú pháp:
