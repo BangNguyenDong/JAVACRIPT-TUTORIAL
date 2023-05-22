@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calculator</title>
+</head>
+<body>
+	<input type="text" id="result" readonly> <!-- Kết quả sẽ hiển thị ở đây -->
+	<br><br>
+	<button onclick="clearResult()">C</button> <!-- Nút xóa -->
+	<button onclick="calculate('/')">/</button> <!-- Nút chia -->
+	<br>
+	<button onclick="addNumber(7)">7</button> <!-- Số 7 -->
+	<button onclick="addNumber(8)">8</button> <!-- Số 8 -->
+	<button onclick="addNumber(9)">9</button> <!-- Số 9 -->
+	<button onclick="calculate('*')">*</button> <!-- Nút nhân -->
+	<br>
+	<button onclick="addNumber(4)">4</button> <!-- Số 4 -->
+	<button onclick="addNumber(5)">5</button> <!-- Số 5 -->
+	<button onclick="addNumber(6)">6</button> <!-- Số 6 -->
+	<button onclick="calculate('-')">-</button> <!-- Nút trừ -->
+	<br>
+	<button onclick="addNumber(1)">1</button> <!-- Số 1 -->
+	<button onclick="addNumber(2)">2</button> <!-- Số 2 -->
+	<button onclick="addNumber(3)">3</button> <!-- Số 3 -->
+	<button onclick="calculate('+')">+</button> <!-- Nút cộng -->
+	<br>
+	<button onclick="addNumber(0)">0</button> <!-- Số 0 -->
+	<button onclick="addNumber('.')">.</button> <!-- Dấu chấm -->
+	<button onclick="calculate('=')">=</button> <!-- Nút bằng -->
+	<br>
+	<script>
+		var input = document.getElementById("result");
+		var expression = "";
+		var previousKey = "";
+		function addNumber(number) {
+			if (previousKey == "=") {
+				clearResult();
+			}
+			expression += number;
+			input.value = expression;
+			previousKey = "";
+		}
+		function calculate(operator) {
+			if (previousKey != "=") {
+				expression = eval(expression);
+				input.value = expression;
+			}
+			expression += operator;
+			previousKey = operator;
+		}
+		function clearResult() {
+			expression = "";
+			input.value = "";
+			previousKey = "";
+		}
+	</script>
+</body>
+</html>
