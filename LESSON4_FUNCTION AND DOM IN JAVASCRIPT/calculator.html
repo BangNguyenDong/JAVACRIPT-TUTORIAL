@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calculator</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		input {
+			width: 200px;
+			height: 30px;
+			font-size: 20px;
+			text-align: right;
+		}
+		button {
+			width: 50px;
+			height: 30px;
+			font-size: 20px;
+		}
+	</style>
+</head>
+<body>
+	<input type="text" id="result" readonly> <!-- Kết quả sẽ hiển thị ở đây -->
+	<br><br>
+	<button onclick="clearResult()">C</button> <!-- Nút xóa -->
+	<button onclick="calculate('/')">/</button> <!-- Nút chia -->
+	<br>
+	<!--Task1: Add 4 buttons for number 7, 8, 9 and * -->
+	<br>
+	<!--Task2: Add 4 buttons for number 4, 5, 6 and - -->
+	<br>
+	<!--Task2: Add 4 buttons for number 1, 2, 3 and + -->
+	<br>
+	<!--Task4: Add 4 buttons for number 0, ., = +- -->
+	<br>
+	<script>
+		var input = document.getElementById("result");
+		var expression = "";
+		var previousKey = "";
+		function addNumber(number) {
+			if (previousKey == "=") {
+				clearResult();
+			}
+			expression += number;
+			input.value = expression;
+			previousKey = "";
+		}
+		function calculate(operator) {
+			if (previousKey != "=") {
+				expression = eval(expression);
+				input.value = expression;
+			}
+			expression += operator;
+			previousKey = operator;
+		}
+		function clearResult() {
+			expression = "";
+			input.value = "";
+			previousKey = "";
+		}
+	</script>
+</body>
+</html>

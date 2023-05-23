@@ -1,0 +1,67 @@
+Đoạn code trên là một đoạn mã JavaScript được sử dụng để xây dựng một máy tính đơn giản trên trình duyệt web. Dưới đây là giải thích từng phần của mã:
+
+1. `var input = document.getElementById("result");`
+   - Dòng này lấy đối tượng HTML có `id` là "result" và gán cho biến `input`.
+   - Giả sử trong HTML, có một phần tử có `id="result"` như sau: `<input type="text" id="result">`.
+   - Điều này cho phép chúng ta thao tác với phần tử input đó trong mã JavaScript.
+
+2. `var expression = "";`
+   - Biến `expression` được khởi tạo với giá trị là một chuỗi rỗng.
+   - Biến này sẽ chứa biểu thức toán học được nhập vào.
+
+3. `var previousKey = "";`
+   - Biến `previousKey` được khởi tạo với giá trị là một chuỗi rỗng.
+   - Biến này sẽ lưu trữ phím trước đó được nhấn.
+
+4. `function addNumber(number) { ... }`
+   - Đây là một hàm JavaScript được định nghĩa để thêm số vào biểu thức.
+   - Hàm này được gọi khi một số được nhấn trên máy tính.
+
+5. `if (previousKey == "=") { clearResult(); }`
+   - Đây là một câu lệnh kiểm tra.
+   - Nếu phím trước đó là phím "=" (tức là đã thực hiện phép tính trước đó), thì hàm `clearResult()` được gọi để xóa kết quả hiện tại và chuỗi biểu thức.
+
+6. `expression += number;`
+   - Dòng này thêm số đã nhấn vào cuối chuỗi biểu thức.
+
+7. `input.value = expression;`
+   - Gán giá trị của biểu thức cho thuộc tính `value` của phần tử input, để hiển thị biểu thức trên trang web.
+
+8. `previousKey = "";`
+   - Đặt giá trị của `previousKey` thành một chuỗi rỗng để đánh dấu là số vừa được thêm vào biểu thức.
+
+9. `function calculate(operator) { ... }`
+   - Đây là một hàm JavaScript được định nghĩa để thực hiện phép tính trên biểu thức.
+   - Hàm này được gọi khi một phép tính được nhấn trên máy tính.
+
+10. `if (previousKey != "=") { ... }`
+    - Đây là một câu lệnh kiểm tra.
+    - Nếu phím trước đó không phải là phím "=" (tức là chưa thực hiện phép tính trước đó), thì phép tính được thực
+
+ hiện.
+
+11. `expression = eval(expression);`
+    - Dòng này sử dụng hàm `eval()` để tính toán giá trị của biểu thức hiện tại.
+    - Hàm `eval()` được sử dụng để đánh giá một biểu thức JavaScript và trả về kết quả.
+
+12. `input.value = expression;`
+    - Gán giá trị của biểu thức đã tính toán cho thuộc tính `value` của phần tử input, để hiển thị kết quả trên trang web.
+
+13. `expression += operator;`
+    - Thêm phép tính vào cuối chuỗi biểu thức.
+
+14. `previousKey = operator;`
+    - Gán giá trị của `previousKey` thành phép tính vừa được thực hiện.
+
+15. `function clearResult() { ... }`
+    - Đây là một hàm JavaScript được định nghĩa để xóa kết quả và reset biểu thức.
+    - Hàm này được gọi khi một sự kiện xóa được kích hoạt trên máy tính.
+
+16. `expression = "";`
+    - Đặt giá trị của biểu thức thành một chuỗi rỗng, xóa biểu thức hiện tại.
+
+17. `input.value = "";`
+    - Đặt giá trị của phần tử input thành một chuỗi rỗng, xóa kết quả hiển thị.
+
+18. `previousKey = "";`
+    - Đặt giá trị của `previousKey` thành một chuỗi rỗng để đánh dấu là đã xóa kết quả và biểu thức.
