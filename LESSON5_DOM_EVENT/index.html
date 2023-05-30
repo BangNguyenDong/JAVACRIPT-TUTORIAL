@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>LESSON5</title>
+</head>
+<body>
+	<!--###Truy cập phần tử DOM-->
+	<!--Truy cập phần tử DOM bằng id-->
+	<div id="app">
+		<h1>Truy cập phần tử DOM bằng id</h1>
+		<p id="demo">Hello World</p>
+	</div>
+	<script>
+		var myElement = document.getElementById("demo");
+		document.write('Nội dung của thẻ p có id là demo là: ' + myElement.innerHTML);
+	</script>
+	<!--Truy cập phần tử DOM bằng class-->
+	<div id="app">
+		<h1>Truy cập phần tử DOM bằng class</h1>
+		<p class="demo">Hello World</p>
+		<p class="demo">Hello World</p>
+		<p class="demo">Hello World</p>
+	</div>
+	<script>
+		var myElements = document.getElementsByClassName("demo");
+		document.write('Nội dung của thẻ p có class là demo là: ' + myElements[0].innerHTML);
+	</script>
+	<!--Truy cập phần tử DOM bằng tag-->
+	<div id="app">
+		<h1>Truy cập phần tử DOM bằng tag</h1>
+		<p>Hello World</p>
+		<p>Hello World</p>
+		<p>Hello World</p>
+	</div>
+	<script>
+		var myElements = document.getElementsByTagName("p");
+		document.write('Nội dung của thẻ p là: ' + myElements[0].innerHTML);
+	</script>
+	<!--Truy cập phần tử DOM bằng querySelector-->
+	<div id="app">
+		<h1>Truy cập phần tử DOM bằng querySelector</h1>
+		<p>Hello World</p>
+		<p>Hello World</p>
+		<p>Hello World</p>
+	</div>
+	<script>
+		var myElement = document.querySelector("#app p");
+		document.write('Nội dung của thẻ p là: ' + myElement.innerHTML);
+	</script>
+	<!--Truy cập phần tử DOM bằng querySelectorAll-->
+	<div id="app">
+		<h1>Truy cập phần tử DOM bằng querySelectorAll</h1>
+		<p>Hello World</p>
+		<p>Hello World</p>
+		<p>Hello World</p>
+	</div>
+	<script>
+		var myElements = document.querySelectorAll("#app p");
+		document.write('Nội dung của thẻ p là: ' + myElements[0].innerHTML);
+	</script>
+	<!--Truy cập value của phần tử DOM bằng value-->
+	<div id="app">
+		<h1>Truy cập value của phần tử DOM bằng value</h1>
+		<input type="text" id="value" value="Hello World">
+	</div>
+	<script>
+		var myElement = document.getElementById("value");
+		document.write('Nội dung của thẻ input có id là demo là: ' + myElement.value);
+	</script>
+	<!--###Thay đổi nội dung của phần tử DOM-->
+	<!--Thay đổi nội dung của phần tử DOM bằng innerHTML-->
+	<div id="app">
+		<h1>Thay đổi nội dung của phần tử DOM bằng innerHTML</h1>
+		<p id="demo">Hello World</p>
+	</div>
+	<script>
+		var myElement = document.getElementById("demo");
+		myElement.innerHTML = "Xin chào các bạn";
+		myElement.style.backgroundColor = "yellow";
+		document.write('Nội dung của thẻ p có id là demo là: ' + myElement.innerHTML);
+	</script>
+	<!--Thay đổi nội dung của phần tử DOM bằng innerText-->
+	<div id="app">
+		<h1>Thay đổi nội dung của phần tử DOM bằng innerText</h1>
+		<p id="demo">Hello World</p>
+	</div>
+	<script>
+		var myElement = document.getElementById("demo");
+		myElement.innerText = "Xin chào các bạn";
+		document.write('Nội dung của thẻ p có id là demo là: ' + myElement.innerText);
+	</script>
+	<!--Thay đổi nội dung của phần tử DOM bằng textContent-->
+	<div id="app">
+		<h1>Thay đổi nội dung của phần tử DOM bằng textContent</h1>
+		<p id="demo">Hello World</p>
+	</div>
+	<script>
+		var myElement = document.getElementById("demo");
+		myElement.textContent = "Xin chào các bạn";
+		document.write('Nội dung của thẻ p có id là demo là: ' + myElement.textContent);
+	</script>
+	<!--Thay đổi nội dung của phần tử DOM bằng value-->
+	<div id="app">
+		<h1>Thay đổi nội dung của phần tử DOM bằng value</h1>
+		<input type="text" id="demo" value="Hello World">
+	</div>
+	<script>
+		var myElement = document.getElementById("demo");
+		myElement.value = "Xin chào các bạn";
+		document.write('Nội dung của thẻ input có id là demo là: ' + myElement.value);
+	</script>
+	<!--Thay đổi nội dung của phần tử DOM bằng attribute-->
+	<div id="app">
+		<h1>Thay đổi nội dung của phần tử DOM bằng attribute</h1>
+		<p id="demo">Hello World</p>
+	</div>
+	<script>
+		var myElement = document.getElementById("demo");
+		myElement.setAttribute("class", "demo");
+		document.write('Nội dung của thẻ p có id là demo là: ' + myElement.getAttribute("class"));
+	</script>
+	<!--Thay đổi nội dung của phần tử DOM bằng style-->
+	<div id="app">
+		<h1>Thay đổi nội dung của phần tử DOM bằng style</h1>
+		<p id="style">Hello World</p>
+	</div>
+	<script>
+		var myElement = document.getElementById("style");
+		myElement.style.color = "red";
+		myElement.style.backgroundColor = "yellow";
+		myElement.style.fontSize = "30px";
+		myElement.style.fontWeight = "bold";
+		myElement.style.padding = "10px";
+		myElement.style.border = "1px solid #ccc";
+		document.write('Nội dung của thẻ p có id là demo là: ' + myElement.style.color);
+	</script>
+	<!--Thay đổi nội dung của phần tử DOM bằng className-->
+	<div id="app">
+		<h1>Thay đổi nội dung của phần tử DOM bằng className</h1>
+		<p id="demo">Hello World</p>
+	</div>
+	<script>
+		var myElement = document.getElementById("demo");
+		myElement.className = "demo";
+		document.write('Nội dung của thẻ p có id là demo là: ' + myElement.className);
+	</script>
+	<!--###Thêm và xóa phần tử DOM-->
+	<!--Thêm phần tử DOM bằng appendChild-->
+	<div id="app">
+		<h1>Thêm phần tử DOM bằng appendChild</h1>
+		<p id="demo">Hello World</p>
+	</div>
+	<script>
+		var myElement = document.createElement("p");
+		myElement.innerHTML = "Xin chào các bạn";
+		document.getElementById("app").appendChild(myElement);
+	</script>
+	<!--Thêm phần tử DOM bằng insertBefore-->
+	<div id="app">
+		<h1>Thêm phần tử DOM bằng insertBefore</h1>
+		<p id="demo">Hello World</p>
+	</div>
+	<script>
+		var myElement = document.createElement("p");
+		myElement.innerHTML = "Xin chào các bạn";
+		document.getElementById("app").insertBefore(myElement, document.getElementById("demo"));
+	</script>
+	<!--Xóa phần tử DOM bằng removeChild-->
+	<div id="app">
+		<h1>Xóa phần tử DOM bằng removeChild</h1>
+		<p id="demo">Hello World</p>
+	</div>
+	<script>
+		var myElement = document.getElementById("demo");
+		document.getElementById("app").removeChild(myElement);
+	</script>
+	<!--Tạo phần tử DOM bằng createElement-->
+	<div id="app">
+		<h1>Tạo phần tử DOM bằng createElement</h1>
+		<p id="demo">Hello World</p>
+	</div>
+	<script>
+		var myElement = document.createElement("p");
+		myElement.innerHTML = "Xin chào các bạn";
+		document.getElementById("app").appendChild(myElement);
+		document.write('Nội dung của thẻ p có id là demo là: ' + myElement.innerHTML);
+	</script>
+	<!--###Xữ lý sự kiện trong JavaScript-->
+	<!--Xữ lý sự kiện bằng addEventListener-->
+	<h1>Xữ lý sự kiện bằng addEventListener</h1>
+	<button id="myButton">Click me</button>
+	<script>
+		document.getElementById("myButton").addEventListener("click", function(){
+			alert("Hello World");
+		});
+	</script>
+	<!--Xữ lý sự kiện bằng onclick-->
+	<h1>Xữ lý sự kiện bằng onclick</h1>
+	<button id="myButton1" onclick="myFunction()">Click me</button>
+	<script>
+		function myFunction(){
+			alert("Hello World");
+		}
+	</script>
+	<!--Xữ lý sự kiện bằng onmouseover-->
+	<h1>Xữ lý sự kiện bằng onmouseover và onmouseout</h1>
+	<button id="over_out" onmouseover="over()" onmouseout="out()">Click me</button>
+	<script>
+		//Mặc đình màu nền là xanh
+		//Đổi màu button thành màu đỏ khi rê chuột vào button
+		function over(){
+			document.getElementById("over_out").style.backgroundColor = "blue";
+		}
+		function out(){
+			document.getElementById("over_out").style.backgroundColor = "red";
+		}
+	</script>
+	<!--Xữ lý sự kiện bằng onchange-->
+	<!--Xữ lý sự kiện bằng 1 key bất kỳ trên bàn phím-->
+	<h1>Xữ lý sự kiện bằng 1 key bất kỳ trên bàn phím</h1>
+	<button id="myButton2">
+	<script>
+		//Nếu bấm phím bất kỳ trên bàn phím thì sẽ tạo alert
+		document.addEventListener("keydown", function(){
+			if(event.keyCode == 13){
+				alert("Hello World");
+			}
+		//document.write(event.keyCode);//In ra mã của phím
+		});
+	</script>
+	<!--// Gắn hàm xử lý sự kiện cho sự kiện submit của form-->
+	<h1>Gắn hàm xử lý sự kiện cho sự kiện submit của form</h1>
+	<form id="myForm">
+		Enter name: <input type="text">
+		<input type="submit">
+	</form>
+	<script>
+		event.preventDefault(); //Ngăn chặn sự kiện mặc định của form
+		document.getElementById("myForm").addEventListener("submit", function(){
+			alert("You submitted the form");//Tạo alert khi submit form
+		});
+	</script>
+	<!--###Điều hướng DOM:
+	<h1>Điều hướng DOM bằng parentNode</h1>
+	<div id="app">
+		<h1>Hello World</h1>
+		<p>Xin chào các bạn</p>
+	</div>
+	<script>
+		var myElement = document.getElementById("app").parentNode;//Lấy phần tử cha của phần tử có id là app
+		myElement.style.backgroundColor = "red";//Thay đổi màu nền của phần tử cha
+	</script>
+	<h1>Điều hướng DOM bằng childNodes</h1>
+	<div id="app">
+		<h1>Hello World</h1>
+		<p>Xin chào các bạn</p>
+	</div>
+	<script>
+		var myElement = document.getElementById("app").childNodes;//Lấy tất cả các phần tử con của phần tử có id là app
+		myElement[1].style.backgroundColor = "blue";//Thay đổi màu nền của phần tử con thứ 2
+		myElement[3].style.backgroundColor = "green";//Thay đổi màu nền của phần tử con thứ 4
+	</script>
+	<h1>Điều hướng DOM bằng firstChild</h1>
+	<div id="app">
+		<h1>Hello World</h1>
+		<p>Xin chào các bạn</p>
+	</div>
+	<script>
+		var myElement = document.getElementById("app").firstChild;//Lấy phần tử con đầu tiên của phần tử có id là app
+		myElement.style.backgroundColor = "red";//Thay đổi màu nền của phần tử con đầu tiên
+	</script>
+	<h1>Điều hướng DOM bằng lastChild</h1>
+	<div id="app">
+		<h1>Hello World</h1>
+		<p>Xin chào các bạn</p>
+	</div>
+	<script>
+		var myElement = document.getElementById("app").lastChild;//Lấy phần tử con cuối cùng của phần tử có id là app
+		myElement.style.backgroundColor = "green";//Thay đổi màu nền của phần tử con cuối cùng
+	</script>
+	<h1>Điều hướng DOM bằng nextSibling</h1>
+	<div id="app">
+		<h1>Hello World</h1>
+		<p>Xin chào các bạn</p>
+	</div>
+	<script>
+		var myElement = document.getElementById("app").nextSibling;//Lấy phần tử kế tiếp của phần tử có id là app
+		myElement.style.backgroundColor = "green";//Thay đổi màu nền của phần tử kế tiếp
+	</script>
+	<h1>Điều hướng DOM bằng previousSibling</h1>
+	<div id="app">
+		<h1>Hello World</h1>
+		<p>Xin chào các bạn</p>
+	</div>
+	<script>
+		var myElement = document.getElementById("app").previousSibling;//Lấy phần tử trước đó của phần tử có id là app
+		myElement.style.backgroundColor = "green";//Thay đổi màu nền của phần tử trước đó
+	</script> -->
+</body>
+</html>

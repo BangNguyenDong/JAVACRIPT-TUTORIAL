@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Phan mem quan ly hoc sinh </title>
+	<style>
+		#studentList {
+      		margin-bottom: 10px;
+    		}
+	</style>
+</head>
+<body>
+	<h1>Quản lý học sinh</h1>
+	<form id="studentForm">
+	  <input type="text" id="nameInput" placeholder="Tên học sinh" required>
+	  <input type="number" id="ageInput" placeholder="Tuổi" required>
+	  <button type="submit">Thêm</button>
+	</form>
+   
+	<div id="studentList">
+	  <h2>Danh sách học sinh</h2>
+	  <ul id="list"></ul>
+	</div>
+	<script>
+		// Lưu trữ danh sách học sinh
+		var students = [];
+
+		// Lấy các phần tử HTML cần sử dụng
+		var form = document.getElementById('studentForm');
+		var nameInput = document.getElementById('nameInput');
+		var ageInput = document.getElementById('ageInput');
+		var list = document.getElementById('list');
+
+		// Xử lý sự kiện submit form
+		form.addEventListener('submit', function(event) {
+		event.preventDefault();
+
+		// Lấy thông tin từ ô nhập
+		var name = nameInput.value;
+		var age = parseInt(ageInput.value);
+
+		// Tạo đối tượng học sinh mới
+		var student = {
+		name: name,
+		age: age
+		};
+
+		// Thêm học sinh vào danh sách
+		students.push(student);
+
+		// Cập nhật giao diện
+		renderStudentList();
+
+		// Reset form
+		form.reset();
+		});
+
+		// Hàm hiển thị danh sách học sinh
+		function renderStudentList() {
+			// Xóa nội dung danh sách hiện tại
+			list.innerHTML = '';
+
+			// Tạo phần tử danh sách cho mỗi học sinh
+			students.forEach(function(student, index) {
+			var listItem = document.createElement('li');
+			listItem.innerHTML = 'Tên: ' + student.name + ', Tuổi: ' + student.age;
+
+			// Tạo nút Xóa
+			var deleteButton = document.createElement('button');
+			deleteButton.innerHTML = 'Xóa';
+			deleteButton.addEventListener('click', function() {
+				// Xóa học sinh khỏi danh sách
+				students.splice(index, 1);
+
+				// Cập nhật giao diện
+				renderStudentList();
+			});
+
+			// Tạo nút Sửa
+			var editButton = document.createElement('button');
+			editButton.innerHTML = 'Sửa';
+			editButton.addEventListener('click', function() {
+				// Hiển thị thông tin học sinh trong form
+				nameInput.value = student.name;
+				ageInput.value = student.age;
+
+				// Xóa học sinh khỏi danh sách
+				students.splice(index, 1);
+
+				// Cập nhật giao diện
+				renderStudentList();
+			});
+
+			// Thêm nút Xóa và Sửa vào phần tử danh sách
+			listItem.appendChild(deleteButton);
+			listItem.appendChild(editButton);
+
+			// Thêm phần tử danh sách vào danh sách chính
+			list.appendChild(listItem);
+			});
+			}
+
+
+	</script>
+</body>
+</html>
