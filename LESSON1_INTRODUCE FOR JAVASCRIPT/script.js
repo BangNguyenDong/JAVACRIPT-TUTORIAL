@@ -141,49 +141,21 @@ console.log(x == 10 || y == 5);
 console.log(!(x == 10 && y == 5));
 
 //Bài 1: Viết chương trình tính tổng, tích, hiệu, thương của 2 số a và b
-var a = Number(prompt("Nhập số a"));
-var b = Number(prompt("Nhập số b"));
-var tong = a + b;
-var tich = a * b;
-var hieu = a - b;
-var thuong = a / b;
-console.log("Tổng của 2 số a và b là: " + tong);
-console.log("Tích của 2 số a và b là: " + tich);
-console.log("Hiệu của 2 số a và b là: " + hieu);
-console.log("Thương của 2 số a và b là: " + thuong);
+
 
 //Bài 2: Kiểm tra xem môt số có phải là số chẵn hay không, nếu là số chẵn thì in ra true, nếu không phải là số chẵn thì in ra false
-var x = Number(prompt("Nhập số x"));
-console.log(x % 2 == 0);
+
 
 //Bài 3: Tính diện tích và chu vi hình chữ nhật
-var chieuDai = Number(prompt("Nhập chiều dài"));
-var chieuRong = Number(prompt("Nhập chiều rộng"));
-var dienTich = chieuDai * chieuRong;
-var chuVi = (chieuDai + chieuRong) * 2;
-console.log("Diện tích hình chữ nhật là: " + dienTich);
-console.log("Chu vi hình chữ nhật là: " + chuVi);
+
 
 //Bài 4: Tính diện tích và chu vi hình tròn
-var banKinh = Number(prompt("Nhập bán kính"));
-var dienTich = banKinh * banKinh * 3.14;
-var chuVi = banKinh * 2 * 3.14;
-console.log("Diện tích hình tròn là: " + dienTich);
-console.log("Chu vi hình tròn là: " + chuVi);
+
 
 //Bài 5: Tính cạnh huyền của tam giác vuông
-var canhGocVuong1 = Number(prompt("Nhập cạnh góc vuông 1"));
-var canhGocVuong2 = Number(prompt("Nhập cạnh góc vuông 2"));
-var canhHuyen = Math.sqrt(canhGocVuong1 * canhGocVuong1 + canhGocVuong2 * canhGocVuong2);
-console.log("Cạnh huyền của tam giác vuông là: " + canhHuyen);
+
 
 //Bài 6: Tính diện tích của tam giác theo công thức Heron
-var canh1 = Number(prompt("Nhập cạnh 1"));
-var canh2 = Number(prompt("Nhập cạnh 2"));
-var canh3 = Number(prompt("Nhập cạnh 3"));
-var p = (canh1 + canh2 + canh3) / 2;
-var dienTich = Math.sqrt(p * (p - canh1) * (p - canh2) * (p - canh3));
-console.log("Diện tích của tam giác là: " + dienTich);
 
 
 
