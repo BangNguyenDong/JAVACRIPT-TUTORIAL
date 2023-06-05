@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Book Management</title>
+</head>
+<body>
+  <h2>Add New Book</h2>
+  <form id="bookForm">
+    <input type="text" id="titleInput" placeholder="Title">
+    <input type="text" id="authorInput" placeholder="Author">
+    <input type="number" id="yearInput" placeholder="Year">
+    <button type="submit">Add Book</button>
+  </form>
+
+  <div id="bookList">
+    <h2>Book List</h2>
+    <ul id="books"></ul>
+  </div>
+
+  <button id="checkButton">Check Book</button>
+
+  <script>
+    // Khai báo lớp Book
+    class Book {
+      constructor(title, author, year) {
+        this.title = title;
+        this.author = author;
+        this.year = year;
+      }
+    }
+
+    // Lấy tham chiếu tới biểu mẫu và danh sách sách
+    const bookForm = document.getElementById("bookForm");
+    const bookList = document.getElementById("books");
+    const checkButton = document.getElementById("checkButton");
+
+    // Mảng chứa các cuốn sách
+    const books = [];
+
+    // Xử lý sự kiện khi biểu mẫu được gửi đi
+    bookForm.addEventListener("submit", function(event) {
+      event.preventDefault(); // Ngăn chặn việc gửi lại biểu mẫu
+
+      // Lấy giá trị từ các trường input
+      const title = document.getElementById("titleInput").value;
+      const author = document.getElementById("authorInput").value;
+      const year = document.getElementById("yearInput").value;
+
+      // Tạo một đối tượng Book mới
+      const book = new Book(title, author, year);
+
+      // Thêm sách vào mảng books
+      books.push(book);
+
+      // Hiển thị thông tin sách trên danh sách
+      const listItem = document.createElement("li");
+      listItem.textContent = `Title: ${book.title}, Author: ${book.author}, Year: ${book.year}`;
+      bookList.appendChild(listItem);
+
+      // Reset biểu mẫu đăng ký
+      bookForm.reset();
+    });
+
+    // Xử lý sự kiện khi nhấn nút "Check Book"
+    checkButton.addEventListener("click", function() {
+      // Dùng vòng lặp để duyệt qua mảng books
+	for (let i = 0; i < books.length; i++) {
+	   // Lấy ra một cuốn sách
+	   const book = books[i];
+
+	   // Kiểm tra xem năm xuất bản có nhỏ hơn 2010 hay không
+	   if (book.year < 2010) {
+		// Nếu có thì in ra thông báo
+		alert(`The book ${book.title} was published before 2010.`);
+	   }
+	 }
+    });
+  </script>
+</body>
+</html>

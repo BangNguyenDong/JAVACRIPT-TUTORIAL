@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Register and Login Form</title>
+</head>
+<body>
+  <div id="registerForm">
+    <h2>Register</h2>
+    <input type="text" id="registerUsername" placeholder="Username">
+    <input type="password" id="registerPassword" placeholder="Password">
+    <button onclick="register()">Register</button>
+  </div>
+
+  <div id="loginForm">
+    <h2>Login</h2>
+    <input type="text" id="loginUsername" placeholder="Username">
+    <input type="password" id="loginPassword" placeholder="Password">
+    <button onclick="login()">Login</button>
+  </div>
+
+  <script>
+// Khai báo lớp User
+class User {
+	constructor(username, password) {
+	  this.username = username;
+	  this.password = password;
+	}
+   }
+   
+   // Tạo danh sách người dùng
+   const users = [];
+   
+   // Hàm đăng ký
+   function register() {
+	const username = document.getElementById("registerUsername").value;
+	const password = document.getElementById("registerPassword").value;
+	// Kiểm tra xem người dùng đã nhập tên người dùng và mật khẩu chưa
+	if (username == "" || password == "") {
+	  alert("Please enter username and password.");
+	  return false;//không cho submit form
+	}
+
+	alert('username: ' + username + ' password: ' + password);
+
+   
+	// Tạo đối tượng User mới và thêm vào danh sách người dùng
+	const user = new User(username, password);
+	users.push(user);
+   
+	// Reset biểu mẫu đăng ký
+	document.getElementById("registerForm").reset();
+   
+	alert("Registration successful. Please log in.");
+   }
+   
+   // Hàm đăng nhập
+   function login() 
+   {
+	const username = document.getElementById("loginUsername").value;
+	const password = document.getElementById("loginPassword").value;
+	// Tìm người dùng trong danh sách
+	const user = users.find(user => user.username === username && user.password === password);   
+	// Tìm người dùng trong danh sách
+	if (username == "" || password == "") {
+	  alert("Please enter username and password.");
+	  return false;//không cho submit form
+	}
+	else if (user)
+	{
+	  alert("Login successful. Welcome, " + user.username + "!");
+	  // Reset biểu mẫu đăng nhập
+	  document.getElementById("loginForm").reset();
+	} else {
+	  alert("Invalid username or password. Please try again.");
+	}
+   	}
+
+  </script>
+</body>
+</html>
