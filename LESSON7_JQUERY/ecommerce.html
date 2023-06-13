@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>jQuery Exercise</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    .product {
+      margin-bottom: 10px;
+    }
+    .cart-popup {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: #fff;
+      padding: 20px;
+      border: 1px solid #ccc;
+      display: none;
+    }
+    .cart-item {
+      margin-bottom: 5px;
+    }
+    .cart-total {
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h1>jQuery Exercise</h1>
+  
+  <h2>Danh sách sản phẩm</h2>
+  <div class="product">
+    <span>Tên sản phẩm 1</span>
+    <button class="add-to-cart">Thêm vào giỏ hàng</button>
+  </div>
+  <div class="product">
+    <span>Tên sản phẩm 2</span>
+    <button class="add-to-cart">Thêm vào giỏ hàng</button>
+  </div>
+  
+  <button id="view-cart">Xem giỏ hàng</button>
+  
+  <div class="cart-popup">
+    <h2>Giỏ hàng</h2>
+    <div class="cart-items"></div>
+    <div class="cart-total"></div>
+  </div>
+  
+  <script>
+    $(document).ready(function() {
+      var cartItems = [];
+
+      $('.add-to-cart').click(function() {
+        var productName = $(this).prev().text();
+        cartItems.push(productName);
+      });
+
+      $('#view-cart').click(function() {
+        $('.cart-items').empty();
+        $('.cart-total').empty();
+
+        if (cartItems.length > 0) {
+          for (var i = 0; i < cartItems.length; i++) {
+            var cartItem = $('<div>').addClass('cart-item').text(cartItems[i]);
+            $('.cart-items').append(cartItem);
+          }
+          $('.cart-total').text('Tổng số sản phẩm: ' + cartItems.length);
+        } else {
+          $('.cart-items').text('Giỏ hàng trống');
+        }
+
+        $('.cart-popup').show();
+      });
+    });
+  </script>
+</body>
+</html>

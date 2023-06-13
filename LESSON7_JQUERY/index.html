@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<!-- B. Cài đặt jQuery:  -->
+	<!-- Hướng dẫn cách tải xuống và cài đặt jQuery. -->
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+</head>
+<body>
+
+	<h1 id="demo"></h1>
+	<p id="demo1">Hello</p>
+
+
+	<script>
+		// I. Giới thiệu jQuery:
+		//A. Khái niệm cơ bản về jQuery:
+		/*1. Giới thiệu jQuery và tầm quan trọng của nó trong việc phát triển web.
+		jQuery là một thư viện JavaScript phổ biến giúp thao tác với HTML, CSS và sự kiện trên trang web một cách dễ dàng.
+		Nó giúp viết mã ngắn gọn và đơn giản hơn so với JavaScript thuần, tiết kiệm thời gian và công sức.
+		
+		2. So sánh với JavaScript thuần và lợi ích của việc sử dụng jQuery.
+		jQuery cung cấp các phương thức và tính năng mạnh mẽ để làm việc với các phần tử HTML, xử lý sự kiện và giao tiếp với máy chủ.
+		So với JavaScript thuần, viết mã jQuery đơn giản hơn, ngắn gọn hơn và tương thích với nhiều trình duyệt khác nhau.*/
+		// JavaScript thuần
+		document.getElementById("demo").innerHTML = "Hello World";
+
+		// jQuery
+		$("#demo").html("Hello World");
+
+		//C. Cú pháp của jQuery
+		// $(selector).method();
+
+		// selector: là phần tử HTML mà bạn muốn thao tác.
+		// method: là phương thức jQuery (ví dụ: html(), text(), val(), ...).
+		// Sử dụng các selector và phương thức này, bạn có thể thao tác với các phần tử HTML một cách dễ dàng.
+
+		// Lợi ích của việc sử dụng jQuery:
+		// - Viết mã ngắn gọn và dễ đọc hơn.
+		// - Tương thích với nhiều trình duyệt khác nhau.
+		// - Có nhiều phương thức và tính năng mạnh mẽ để làm việc với các phần tử HTML, xử lý sự kiện và giao tiếp với máy chủ.
+
+		// Sử dụng các selector cơ bản (ID, class, phần tử).
+		$('#myElement').hide(); // ẩn phần tử có ID là 'myElement'
+		$('.myClass').css('color', 'red'); // thay đổi màu chữ của các phần tử có lớp là 'myClass'
+		$('p').addClass('highlight'); // thêm lớp 'highlight' vào tất cả các phần tử <p>
+
+		//II. Tương tác với phần tử HTML:
+		//A. Chọn phần tử HTML:
+
+		// Sử dụng các selector để chọn phần tử.
+		$('#myElement').text('Hello, jQuery!'); // thay đổi nội dung của phần tử có ID là 'myElement'
+		$('.myClass').hide(); // ẩn tất cả các phần tử có lớp là 'myClass'
+
+		// Làm việc với phần tử đã chọn (thay đổi nội dung, thuộc tính).
+		$('#myElement').text('New Text'); // thay đổi nội dung của phần tử có ID là 'myElement'
+		$('.myClass').attr('href', 'https://example.com'); // thay đổi thuộc tính 'href' của tất cả các phần tử có lớp là 'myClass'
+
+		//B. Xử lý sự kiện
+		// Gắn kết các sự kiện với phần tử (click, hover, submit).
+		$('#myButton').click(function() {
+		alert('Button clicked!'); // hiển thị thông báo khi phần tử có ID là 'myButton' được click
+		});
+
+		$('.myElement').hover(function() {
+		$(this).toggleClass('highlight');// thêm hoặc xóa lớp 'highlight' khi phần tử có lớp là 'myElement' được hover
+		});
+
+		$('form').submit(function(event) {
+		event.preventDefault(); // ngăn chặn hành vi mặc định của form
+		alert('Form submitted!');
+		});
+
+		// Thao tác với sự kiện (ngăn chặn mặc định, ngừng lan truyền).
+		$('a').click(function(event) {
+		event.preventDefault(); // Ngăn chặn hành vi mặc định của liên kết
+		});
+
+		$('.myElement').click(function(event) {
+		event.stopPropagation(); // Ngừng lan truyền sự kiện đến các phần tử cha
+		});
+
+		//C. Hiệu ứng và hoạt ảnh
+		// Tạo hiệu ứng cơ bản (ẩn/hiện, fade, slide).
+		$('#myElement').hide(); // ẩn phần tử có ID là 'myElement'
+		$('.myClass').fadeIn(); // hiển thị dần tất cả các phần tử có lớp là 'myClass'
+		$('.myClass').slideUp(); // trượt lên tất cả các phần tử có lớp là 'myClass'
+
+		// Tuỳ chỉnh thời gian và hiệu ứng.
+		$('#myElement').fadeOut(1000); // ẩn phần tử có ID là 'myElement' trong vòng 1 giây
+		$('.myClass').slideDown(500); // trượt xuống tất cả các phần tử có lớp là 'myClass' trong vòng 0.5 giây
+
+
+	</script>
+</body>
+</html>
+

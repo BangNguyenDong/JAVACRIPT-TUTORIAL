@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Todo List</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    li {
+      margin-bottom: 10px;
+    }
+    button {
+      margin-left: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Todo List</h1>
+  
+  <input type="text" id="newItemInput">
+  <button id="addButton">Thêm</button>
+  
+  <ul id="todoList">
+    <li>Công việc 1 <button class="deleteButton">Xóa</button></li>
+    <li>Công việc 2 <button class="deleteButton">Xóa</button></li>
+    <li>Công việc 3 <button class="deleteButton">Xóa</button></li>
+  </ul>
+  
+  <script>
+    $(document).ready(function() {
+      // Xóa mục khỏi danh sách
+      $('#todoList').on('click', '.deleteButton', function() {
+        $(this).parent().remove();
+      });
+      
+      // Thêm mục vào danh sách
+      $('#addButton').click(function() {
+        var newItem = $('#newItemInput').val();
+        
+        if (newItem !== '') {
+          var listItem = '<li>' + newItem + ' <button class="deleteButton">Xóa</button></li>';
+          $('#todoList').append(listItem);
+          
+          $('#newItemInput').val('');
+          $('#newItemInput').focus();
+        }
+      });
+    });
+  </script>
+</body>
+</html>

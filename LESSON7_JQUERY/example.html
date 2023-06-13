@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>jQuery Examples</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    .highlight {
+      background-color: yellow;
+    }
+  </style>
+</head>
+<body>
+  <h1>jQuery Examples</h1>
+  
+  <h2>Change Element Content</h2>
+  <p id="myElement">Hello, World!</p>
+  
+  <h2>Show/Hide Elements</h2>
+  <div class="myElement">This is a div element.</div>
+  <button id="hideButton">Hide</button>
+  <button id="showButton">Show</button>
+  
+  <h2>Add/Remove Class</h2>
+  <p class="myClass">This is a paragraph.</p>
+  <button id="addClassButton">Add Class</button>
+  <button id="removeClassButton">Remove Class</button>
+  
+  <h2>Handle Click Event</h2>
+  <button id="myButton">Click Me!</button>
+  
+  <h2>Slide Up/Down</h2>
+  <div class="slideUpElement">This element will slide up.</div>
+  <div class="slideDownElement" style="display:none;">This element will slide down.</div>
+  <button id="slideUpButton">Slide Up</button>
+  <button id="slideDownButton">Slide Down</button>
+  
+  <script>
+    $(document).ready(function() {
+      // Thay đổi nội dung của phần tử
+      $('#myElement').text('Hello, jQuery!');
+      
+      // Ẩn phần tử
+      $('.myElement').hide();
+      
+      // Hiện phần tử
+      $('#showButton').click(function() {
+        $('.myElement').show();
+      });
+      
+      // Thêm lớp cho phần tử
+      $('#addClassButton').click(function() {
+        $('p').addClass('highlight');
+      });
+      
+      // Xóa lớp khỏi phần tử
+      $('#removeClassButton').click(function() {
+        $('p').removeClass('highlight');
+      });
+      
+      // Xử lý sự kiện click trên phần tử
+      $('#myButton').click(function() {
+        alert('Button clicked!');
+      });
+      
+      // Slide Up phần tử
+      $('#slideUpButton').click(function() {
+        $('.slideUpElement').slideUp();
+      });
+      
+      // Slide Down phần tử
+      $('#slideDownButton').click(function() {
+        $('.slideDownElement').slideDown();
+      });
+    });
+  </script>
+</body>
+</html>

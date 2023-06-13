@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Image Gallery</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    .image {
+      display: inline-block;
+      margin: 10px;
+    }
+    .image img {
+      width: 200px;
+      height: 150px;
+      cursor: pointer;
+    }
+    .details {
+      display: none;
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin-top: 10px;
+    }
+    .details h3 {
+      margin-top: 0;
+    }
+    .closeButton {
+      margin-left: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Image Gallery</h1>
+  
+  <div class="image">
+    <img src="image1.jpg" alt="Image 1">
+    <button class="detailsButton">Xem chi tiết</button>
+    <div class="details">
+      <h3>Image 1</h3>
+      <p>Mô tả hình ảnh 1.</p>
+      <p><a href="image1.jpg" target="_blank">Xem ảnh gốc</a></p>
+      <button class="closeButton">Đóng</button>
+    </div>
+  </div>
+  
+  <div class="image">
+    <img src="image2.jpg" alt="Image 2">
+    <button class="detailsButton">Xem chi tiết</button>
+    <div class="details">
+      <h3>Image 2</h3>
+      <p>Mô tả hình ảnh 2.</p>
+      <p><a href="image2.jpg" target="_blank">Xem ảnh gốc</a></p>
+      <button class="closeButton">Đóng</button>
+    </div>
+  </div>
+  
+  <script>
+    $(document).ready(function() {
+      // Hiển thị thông tin chi tiết khi nhấp vào nút "Xem chi tiết"
+      $('.detailsButton').click(function() {
+        $(this).siblings('.details').show();
+      });
+      
+      // Ẩn thông tin chi tiết khi nhấp vào nút "Đóng"
+      $('.closeButton').click(function() {
+        $(this).closest('.details').hide();
+      });
+    });
+  </script>
+</body>
+</html>
