@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<style>
+		.highlight {
+			background-color: yellow;
+		}
+	</style>
+</head>
+<body>
+	<div id="demo">
+		Good Morning
+	</div>
+	<div id="myElement">
+		<button>Click me</button>
+		<p>Hello</p>
+	</div>
+
+	<div class="myClass">
+		<a href="#">Link 1</a>
+		<a href="#">Link 2</a>
+		<a href="#">Link 3</a>
+	</div>
+
+	<form id="myForm">
+		<input type="text" name="name">
+		<input type="submit" value="Submit">
+	</form>
+
+	<div id="test">
+		<p>Test</p>
+	</div>
+
+	<div id="test1">
+		<p>Test1</p>
+	</div>
+
+	<script>
+		//tương tác với phần tử html
+		$("#demo").html("Hello World");
+		$("#myElement").hide();
+		$(".myClass").css('background-color', 'red');
+		$(".myClass").css('color', 'white');
+		$('p').css('font-size', '20px');
+		$('p').addClass('highlight');
+
+		//thay đổi nội dung phần tử
+		$('#demo').text('Good Afternoon');
+		$('a').attr('href', 'https://www.google.com');
+		
+		//xử lý sự kiện
+		//Xử lý sự kiện bên javascript thuần
+		/*document.getElementById('demo').addEventListener('click', function() {
+			alert('Hello World');
+		});*/AbstractRange
+		//Xử lý sự kiện với jquery
+		//click
+		$('#demo').click(function() {
+			alert('Hello World');
+		});
+		//hover
+		$('#demo').hover(function() {
+			//đổi màu khi rê chuột
+			$(this).css('background-color', 'red');
+			alert('Hello World');
+		});
+		//submit
+		$('#myForm').submit(function() {
+			event.preventDefault();
+			alert('Hello World');
+		});
+
+		//Hiệu ứng và hoạt ảnh
+		//hide
+		$('#myForm').hide(3000);
+		//show
+		$('#myForm').show(3000);
+		//toggle là sự kết hợp của hide và show
+		$('#myForm').toggle(3000);
+		//fadeIn là hiệu ứng xuất hiện từ từ
+		$('#test').fadeIn(300);
+		//fadeOut là hiệu ứng biến mất từ từ
+		$('#test').fadeOut(300);
+		//fadeToggle là sự kết hợp của fadeIn và fadeOut
+		$('#test').fadeToggle(300);
+		//slideUp là hiệu ứng trượt lên
+		$('#test').slideUp(300);
+		//slideDown là hiệu ứng trượt xuống
+		$('#test').slideDown(300);
+		//slideToggle là sự kết hợp của slideUp và slideDown
+		$('#test').slideToggle(300);
+		//animate là hiệu ứng tùy biến
+		$('#test1').animate({
+			opacity: 0.5,
+			width: '50%',
+			height: '50%'
+		}, 3000);
+
+		//Lấy giá trị của phần tử
+		//lấy giá trị của phần tử input
+		$('input[type="text"]').val();
+		alert($('input[type="text"]').val());
+		//lấy giá trị của phần tử select
+		$('select').val();
+		//lấy giá trị của phần tử radio
+		$('input[type="radio"]').val();
+
+		//Lấy thuộc tính của phần tử
+		$('a').attr('href');
+		$('a').attr('href', 'https://www.google.com');
+		
+
+
+	
+	</script>
+</body>
+</html>
