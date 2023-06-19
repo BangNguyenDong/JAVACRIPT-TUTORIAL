@@ -24,8 +24,7 @@ In this lesson, you'll learn about object-oriented programming and its use in Ja
 <li>7. jQuery
 Learn about jQuery, a popular JavaScript library used for building dynamic websites.
 </li>
-<li>8-9. React
-In these lessons, you'll learn about React, a JavaScript library for building user interfaces.
+<li>8-9. Xử lý bất đồng bộ và AJAX
 </li>
 <li>10-12. Project
 Finally, in these lessons, you'll apply all the skills you've learned to build a project.
