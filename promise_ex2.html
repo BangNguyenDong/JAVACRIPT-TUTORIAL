@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Promise Example</title>
+</head>
+<body>
+  <h1>Promise Example</h1>
+
+  <script>
+    function fetchData() {
+      return new Promise((resolve, reject) => {
+        // Mô phỏng việc tải dữ liệu từ API
+        setTimeout(() => {
+          const data = { id: 1, name: "John Doe", email: "johndoe@example.com" };
+
+          if (data) {
+            resolve(data); // Hoàn thành và trả về dữ liệu
+          } else {
+            reject("Lỗi: Không thể tải dữ liệu"); // Reject với thông báo lỗi
+          }
+        }, 2000); // Giả định việc tải dữ liệu mất 2 giây
+      });
+    }
+
+    // Sử dụng Promise
+    fetchData()
+      .then(data => {
+        console.log(data); // { id: 1, name: "John Doe", email: "johndoe@example.com" }
+      })
+      .catch(error => {
+        console.error(error); // "Lỗi: Không thể tải dữ liệu"
+      });
+  </script>
+</body>
+</html>
