@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ví dụ Callback HTML</title>
+</head>
+<body>
+  <h1>Đếm ngược</h1>
+  <p id="countdown"></p>
+  
+  <script>
+    // Hàm countdown nhận một giá trị ban đầu và một hàm callback làm đối số
+    function countdown(initialValue, callback) {
+      let count = initialValue;
+      
+      // Tạo một interval để giảm giá trị count sau mỗi giây
+      const interval = setInterval(function() {
+        document.getElementById("countdown").textContent = count;
+        count--;
+        
+        // Nếu count giảm xuống 0, dừng interval và gọi hàm callback
+        if (count === 0) {
+          clearInterval(interval);
+          callback();
+        }
+      }, 1000);
+    }
+
+    // Hàm callback được truyền vào làm đối số của hàm countdown
+    function doneCallback() {
+      document.getElementById("countdown").textContent = "Hoàn thành!";
+      alert("Đếm ngược đã kết thúc!");
+    }
+
+    // Gọi hàm countdown và truyền giá trị ban đầu là 5 và doneCallback làm callback
+    countdown(5, doneCallback);
+  </script>
+</body>
+</html>
