@@ -157,6 +157,22 @@ console.log(!(x == 10 && y == 5));
 
 //Bài 6: Tính diện tích của tam giác theo công thức Heron
 
+//Bài 7: Nhập nhiệt độ theo độ Celsius từ người dùng sử dụng hàm prompt.
+Chuyển đổi nhiệt độ từ Celsius sang Fahrenheit bằng công thức F = (C * 9/5) + 32.
+In ra nhiệt độ sau chuyển đổi bằng alert.
+
+//Bài 8: Nhập năm sinh của người dùng từ hàm prompt.
+Tính tuổi của người dùng dựa trên năm hiện tại và năm sinh.
+In ra tuổi của người dùng và và in ra năm mà họ đủ 100 tuổi bằng alert.
+
+//Bài 9:Sử dụng hàm prompt để nhập vào cân nặng (kg) và chiều cao (m) của người dùng.
+Tính chỉ số BMI bằng công thức: BMI = cân nặng / (chiều cao * chiều cao).
+In ra kết quả BMI bằng alert.
+
+//Bài 10: Sử dụng hàm prompt để nhập vào số tiền gửi ban đầu, lãi suất hàng năm và số năm gửi tiền.
+Tính tổng số tiền sau số năm gửi tiền với lãi suất tính theo mức phần trăm đã nhập và in ra kết quả bằng alert.
+	
+
 
 
 
