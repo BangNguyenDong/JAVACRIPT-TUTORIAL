@@ -153,11 +153,14 @@ do {
 //Task2.3. Viết chương trình yêu cầu người dùng nhập vào một số nguyên n.
 //Sau đó, in ra tổng các số lẻ từ 1 đến n.
 
-//Task2.4. Viết chương trình yêu cầu người dùng nhập vào một số nguyên n.
-//Sau đó, in ra tổng các số chẵn từ 1 đến n.
+//Task2.4.Tạo một số ngẫu nhiên từ 1 đến 100. Yêu cầu người dùng đoán số đó. 
+//Sau mỗi lần đoán, thông báo cho họ biết số đoán của họ cao hơn, thấp hơn hay chính xác. Tiếp tục cho đến khi họ đoán đúng.
 
 //Task2.5. Viết chương trình yêu cầu người dùng nhập vào một số nguyên n.
 //Sau đó, in ra tổng các số chia hết cho 3 từ 1 đến n.
+
+//Task2.6.Viết chương trình yêu cầu người dùng nhập mật khẩu đúng (ví dụ: "123456") sử dụng vòng lặp do while. 
+//Nếu người dùng nhập sai mật khẩu, yêu cầu họ nhập lại cho đến khi nhập đúng.
 
 /*Vòng for lồng nhau
 Vòng lặp for có thể được lồng nhau bên trong vòng lặp khác.
@@ -180,11 +183,11 @@ for (let i = 0; i < 10; i++) {
     console.log("Vòng lặp trong: " + j);
   }
 }
-//Task2.6. Giải câu đố "vừa gà vừa chó,bó lại cho trong, 36 con, 100 chân"
+//Task2.7. Giải câu đố "vừa gà vừa chó,bó lại cho trong, 36 con, 100 chân"
 //Viết chương trình tìm ra số con gà và số con chó.
 //Gợi ý: Sử dụng vòng lặp lồng nhau.
 
-//Task2.7. Viết chương trình yêu cầu người dùng nhập vào một số nguyên n.
+//Task2.8. Viết chương trình yêu cầu người dùng nhập vào một số nguyên n.
 //Sau đó, in ra màn hình bảng cửu chương từ 1 đến n.
 
 //Task2.8. Viết chương trình yêu cầu người dùng nhập vào một số nguyên n.
