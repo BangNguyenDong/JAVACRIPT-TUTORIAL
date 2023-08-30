@@ -72,19 +72,19 @@ switch (day) {
     break;
 }
 
-//Task1. Viết chương trình nhập vào một số, kiểm tra và in ra số đó là số chẵn hay lẻ.
+//Task1.1. Viết chương trình nhập vào một số, kiểm tra và in ra số đó là số chẵn hay lẻ.
 
-//Task2. Viết chương trình nhập vào một số, kiểm tra và in ra số đó là số âm hay dương.
+//Task1.2. Viết chương trình nhập vào một số, kiểm tra và in ra số đó là số âm hay dương.
 
-//Task3. Dùng switch/case để viết chương trình nhập vào một số, kiểm tra và in ra số đó là số chẵn hay lẻ.
+//Task1.3. Dùng switch/case để viết chương trình nhập vào một số, kiểm tra và in ra số đó là số chẵn hay lẻ.
 
-//Task4.Viết một chương trình yêu cầu người dùng nhập vào một số nguyên từ 1 đến 7. 
+//Task1.4.Viết một chương trình yêu cầu người dùng nhập vào một số nguyên từ 1 đến 7. 
 //Chương trình sẽ trả về ngày tương ứng trong tuần với số được nhập vào. Sử dụng switch case để giải quyết bài tập này.
 
-//Task5.Viết một chương trình máy tính đơn giản bao gồm các chức năng cộng, trừ, nhân và chia sử dụng cấu trúc switch case.
+//Task1.5.Viết một chương trình máy tính đơn giản bao gồm các chức năng cộng, trừ, nhân và chia sử dụng cấu trúc switch case.
 //Hỏi người dùng chọn một phép tính, sau đó nhập hai số và trả về kết quả.
 
-//Task6. Viết một chương trình đánh giá điểm học tập dựa trên một điểm số nhập vào từ người dùng. Sử dụng cấu trúc switch case để xác định xếp loại điểm theo quy tắc sau:
+//Task1.6. Viết một chương trình đánh giá điểm học tập dựa trên một điểm số nhập vào từ người dùng. Sử dụng cấu trúc switch case để xác định xếp loại điểm theo quy tắc sau:
 
 9-10: Xuất sắc
 8-8.9: Giỏi
@@ -92,7 +92,7 @@ switch (day) {
 5-6.9: Trung bình
 0-4.9: Yếu
 
-// Task7. Viết chương trình nhận vào số nguyên từ 1 đến 4, mỗi số đại diện cho một loại hình học: 1 - Hình vuông, 2 - Hình chữ nhật, 3 - Hình tam giác, 4 - Hình tròn. 
+//Task1.7. Viết chương trình nhận vào số nguyên từ 1 đến 4, mỗi số đại diện cho một loại hình học: 1 - Hình vuông, 2 - Hình chữ nhật, 3 - Hình tam giác, 4 - Hình tròn. 
 //Dựa vào lựa chọn của người dùng, yêu cầu họ nhập các thông số liên quan (ví dụ: cạnh, chiều dài, chiều rộng, bán kính) và tính diện tích của hình tương ứng.
 	
 
@@ -144,19 +144,19 @@ do {
   j++;
 } while (j < 10);
 
-//Task5. Viết chương trình yêu cầu người dùng nhập vào một số nguyên n.
+//Task2.1. Viết chương trình yêu cầu người dùng nhập vào một số nguyên n.
 //Sau đó, in ra màn hình các số từ 1 đến n.
 
-//Task6. Viết chương trình yêu cầu người dùng nhập vào một số nguyên n.
+//Task2.2. Viết chương trình yêu cầu người dùng nhập vào một số nguyên n.
 //Sau đó in ra tổng các số từ 1 đến n.
 
-//Task7. Viết chương trình yêu cầu người dùng nhập vào một số nguyên n.
+//Task2.3. Viết chương trình yêu cầu người dùng nhập vào một số nguyên n.
 //Sau đó, in ra tổng các số lẻ từ 1 đến n.
 
-//Task8. Viết chương trình yêu cầu người dùng nhập vào một số nguyên n.
+//Task2.4. Viết chương trình yêu cầu người dùng nhập vào một số nguyên n.
 //Sau đó, in ra tổng các số chẵn từ 1 đến n.
 
-//Task9. Viết chương trình yêu cầu người dùng nhập vào một số nguyên n.
+//Task2.5. Viết chương trình yêu cầu người dùng nhập vào một số nguyên n.
 //Sau đó, in ra tổng các số chia hết cho 3 từ 1 đến n.
 
 /*Vòng for lồng nhau
@@ -180,17 +180,17 @@ for (let i = 0; i < 10; i++) {
     console.log("Vòng lặp trong: " + j);
   }
 }
-//Task10. Giải câu đố "vừa gà vừa chó,bó lại cho trong, 36 con, 100 chân"
+//Task2.6. Giải câu đố "vừa gà vừa chó,bó lại cho trong, 36 con, 100 chân"
 //Viết chương trình tìm ra số con gà và số con chó.
 //Gợi ý: Sử dụng vòng lặp lồng nhau.
 
-//Task11. Viết chương trình yêu cầu người dùng nhập vào một số nguyên n.
+//Task2.7. Viết chương trình yêu cầu người dùng nhập vào một số nguyên n.
 //Sau đó, in ra màn hình bảng cửu chương từ 1 đến n.
 
-//Task12. Viết chương trình yêu cầu người dùng nhập vào một số nguyên n.
+//Task2.8. Viết chương trình yêu cầu người dùng nhập vào một số nguyên n.
 //Sau đó, in ra màn hình bảng cửu chương của n.
 
-//Task13. Viết chương trình in ra bảng cửu chương từ 1 đến 10.
+//Task2.9. Viết chương trình in ra bảng cửu chương từ 1 đến 10.
 
 
 
