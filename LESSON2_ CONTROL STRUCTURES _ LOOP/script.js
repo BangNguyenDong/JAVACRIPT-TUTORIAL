@@ -155,6 +155,7 @@ do {
 
 //Task2.4.Tạo một số ngẫu nhiên từ 1 đến 100. Yêu cầu người dùng đoán số đó. 
 //Sau mỗi lần đoán, thông báo cho họ biết số đoán của họ cao hơn, thấp hơn hay chính xác. Tiếp tục cho đến khi họ đoán đúng.
+//Gợi ý tạo số ngẫu nhiên: var soBiMat = Math.floor(Math.random() * 100) + 1;
 
 //Task2.5. Viết chương trình yêu cầu người dùng nhập vào một số nguyên n.
 //Sau đó, in ra tổng các số chia hết cho 3 từ 1 đến n.
