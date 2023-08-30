@@ -81,6 +81,22 @@ switch (day) {
 //Task4.Viết một chương trình yêu cầu người dùng nhập vào một số nguyên từ 1 đến 7. 
 //Chương trình sẽ trả về ngày tương ứng trong tuần với số được nhập vào. Sử dụng switch case để giải quyết bài tập này.
 
+//Task5.Viết một chương trình máy tính đơn giản bao gồm các chức năng cộng, trừ, nhân và chia sử dụng cấu trúc switch case.
+//Hỏi người dùng chọn một phép tính, sau đó nhập hai số và trả về kết quả.
+
+//Task6. Viết một chương trình đánh giá điểm học tập dựa trên một điểm số nhập vào từ người dùng. Sử dụng cấu trúc switch case để xác định xếp loại điểm theo quy tắc sau:
+
+9-10: Xuất sắc
+8-8.9: Giỏi
+7-7.9: Khá
+5-6.9: Trung bình
+0-4.9: Yếu
+
+// Task7. Viết chương trình nhận vào số nguyên từ 1 đến 4, mỗi số đại diện cho một loại hình học: 1 - Hình vuông, 2 - Hình chữ nhật, 3 - Hình tam giác, 4 - Hình tròn. 
+//Dựa vào lựa chọn của người dùng, yêu cầu họ nhập các thông số liên quan (ví dụ: cạnh, chiều dài, chiều rộng, bán kính) và tính diện tích của hình tương ứng.
+	
+
+	
 /*JavaScript cung cấp ba loại vòng lặp khác nhau: for, while, và do...while.
 Dưới đây là cú pháp và giải thích về cách sử dụng các loại vòng lặp này: */
 /*1. Vòng lặp for
