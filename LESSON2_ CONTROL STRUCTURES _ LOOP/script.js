@@ -190,10 +190,10 @@ for (let i = 0; i < 10; i++) {
 //Task2.8. Viết chương trình yêu cầu người dùng nhập vào một số nguyên n.
 //Sau đó, in ra màn hình bảng cửu chương từ 1 đến n.
 
-//Task2.8. Viết chương trình yêu cầu người dùng nhập vào một số nguyên n.
+//Task2.9. Viết chương trình yêu cầu người dùng nhập vào một số nguyên n.
 //Sau đó, in ra màn hình bảng cửu chương của n.
 
-//Task2.9. Viết chương trình in ra bảng cửu chương từ 1 đến 10.
+//Task2.10. Viết chương trình in ra bảng cửu chương từ 1 đến 10.
 
 
 
