@@ -183,3 +183,5 @@ console.log(arr.sort()); // [1, 2, 3, 4, 5]
 
 //Task9. Tìm số lần xuất hiện của tất cả các phần tử trong mảng
 
+//Task10. Viết một hàm JavaScript nhận một mảng các số nguyên và trả về số lớn thứ hai trong mảng.
+
