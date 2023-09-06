@@ -176,8 +176,10 @@ console.log(arr.sort()); // [1, 2, 3, 4, 5]
 //Task5. Tìm phần tử lớn nhất và nhỏ nhất trong mảng
 
 //Task6. Tìm các số chẵn và lẻ trong mảng
-	
-//Task7. Tìm số lần xuất hiện của một phần tử trong mảng
 
-//Task8. Tìm số lần xuất hiện của tất cả các phần tử trong mảng
+//Task7. Tính tổng các số lẻ và số chẳn trong mảng
+	
+//Task8. Tìm số lần xuất hiện của một phần tử trong mảng
+
+//Task9. Tìm số lần xuất hiện của tất cả các phần tử trong mảng
 
