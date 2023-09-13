@@ -146,5 +146,17 @@ document.body.appendChild(newElement);
 //Tiền điện = số điện sử dụng (kWh) * giá tiền (đồng/kWh)
 
 
+//Task6:  Tạo một trang HTML với một ô input và một nút "Tính tổng". 
+//Sử dụng JavaScript để khi nhấp vào nút "Tính tổng",
+//tính tổng của tất cả các số từ 1 đến số được nhập trong ô input và hiển thị kết quả.
+
+//Task7:  Tạo một trang HTML với một ô input và một nút "Chuyển đổi". Sử dụng JavaScript để khi nhấp vào nút "Chuyển đổi", 
+//chuyển đổi giữa hai đơn vị nhiệt độ là Celsius và Fahrenheit dựa trên giá trị nhập vào và hiển thị kết quả chuyển đổi.
+
+//Task8: Tạo một trang HTML với một đoạn văn bản và hai nút "Thay đổi màu" và "Thay đổi font".
+//Sử dụng JavaScript để khi nhấp vào nút "Thay đổi màu", màu văn bản trong đoạn văn bản sẽ thay đổi ngẫu nhiên.
+//Khi nhấp vào nút "Thay đổi font", font chữ của đoạn văn bản sẽ thay đổi ngẫu nhiên.
+
+
 
 
