@@ -62,7 +62,7 @@ một lỗi sẽ xảy ra.
 */
 //Task 1: Viết hàm tính tổng, hiệu, tích, thương của hai số.
 
-//Task 2: Viết hàm tính chu vi và diện tích các hình:
+//Task 2: Viết hàm tính chu vi và diện tích các hình  (chữ nhật, tròn, vuông, tam giác )
 
 //Task 3: Viết hàm tính tổng các số từ 1 đến n.
 
