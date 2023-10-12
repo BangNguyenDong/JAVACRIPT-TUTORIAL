@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sync Example</title>
+</head>
+<body>
+  <h1>Example without Asynchronous (Synchronous)</h1>
+
+  <div id="output"></div>
+
+  <script>
+    function fetchDataSync() {
+      document.getElementById('output').innerHTML += 'Start fetching data...<br>';
+
+      // Giả định tải dữ liệu mất 3 giây
+      for (let i = 0; i < 3; i++) {
+        document.getElementById('output').innerHTML += `Fetching data: ${i + 1} second(s) elapsed<br>`;
+      }
+
+      document.getElementById('output').innerHTML += 'Data fetched successfully!';
+    }
+
+    document.getElementById('output').innerHTML += 'Before fetching data<br>';
+    fetchDataSync();
+    document.getElementById('output').innerHTML += '<br>After fetching data';
+  </script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Multiple Asynchronous Examples</title>
+</head>
+<body>
+  <h1>Multiple Asynchronous Examples</h1>
+
+  <h2>Using Promise</h2>
+  <button onclick="loadDataWithPromise()">Load Data with Promise</button>
+  <div id="outputPromise"></div>
+
+  <h2>Without Promise</h2>
+  <button onclick="loadDataWithoutPromise()">Load Data without Promise</button>
+  <div id="outputNoPromise"></div>
+
+  <script>
+    // Using Promise
+    function fetchDataPromise(url) {
+      return new Promise((resolve, reject) => {
+        setTimeout(() => {
+          const data = `Data loaded from ${url} using Promise!`;
+          resolve(data);
+        }, Math.random() * 3000);
+      });
+    }
+
+    async function loadDataWithPromise() {
+      console.log('Start loading data using Promise...');
+      document.getElementById('outputPromise').innerHTML = 'Start loading data using Promise...<br>';
+
+      const urls = ['URL1', 'URL2', 'URL3'];
+
+      try {
+        const results = await Promise.all(urls.map(url => fetchDataPromise(url)));
+        results.forEach(data => {
+          console.log('Data loaded:', data);
+          document.getElementById('outputPromise').innerHTML += 'Data loaded: ' + data + '<br>';
+        });
+      } catch (error) {
+        console.error('Error loading data:', error);
+        document.getElementById('outputPromise').innerHTML += 'Error loading data: ' + error + '<br>';
+      }
+    }
+
+    // Without Promise
+    function fetchDataNoPromise(url, callback) {
+      setTimeout(() => {
+        const data = `Data loaded from ${url} without Promise!`;
+        callback(null, data);
+      }, Math.random() * 3000);
+    }
+
+    function loadDataWithoutPromise() {
+      console.log('Start loading data without Promise...');
+      document.getElementById('outputNoPromise').innerHTML = 'Start loading data without Promise...<br>';
+
+      const urls = ['URL1', 'URL2', 'URL3'];
+      let completedCount = 0;
+
+      urls.forEach(url => {
+        fetchDataNoPromise(url, (error, data) => {
+          if (error) {
+            console.error('Error loading data:', error);
+            document.getElementById('outputNoPromise').innerHTML += 'Error loading data: ' + error + '<br>';
+          } else {
+            console.log('Data loaded:', data);
+            document.getElementById('outputNoPromise').innerHTML += 'Data loaded: ' + data + '<br>';
+          }
+
+          completedCount++;
+          if (completedCount === urls.length) {
+            console.log('All data loaded without Promise');
+          }
+        });
+      });
+    }
+  </script>
+</body>
+</html>

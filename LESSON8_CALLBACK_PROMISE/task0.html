@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Management</title>
+</head>
+<body>
+  <h1>Student Management</h1>
+
+  <button onclick="addStudent()">Add Student</button>
+  <button onclick="getStudents()">Get Students</button>
+  <button onclick="findStudent()">Find Student</button>
+  <button onclick="removeStudent()">Remove Student</button>
+
+  <script>
+    class Student {
+      constructor(id, name, age) {
+        this.id = id;
+        this.name = name;
+        this.age = age;
+      }
+    }
+
+    class StudentManager {
+      constructor() {
+        this.students = [];
+      }
+
+      addStudent(student) {
+        return new Promise((resolve, reject) => {
+          this.students.push(student);
+          resolve('Student has been added to the list.');
+        });
+      }
+
+      getStudents() {
+        return new Promise((resolve, reject) => {
+          resolve(this.students);
+        });
+      }
+
+      findStudentById(id) {
+        return new Promise((resolve, reject) => {
+          const student = this.students.find(student => student.id === id);
+          if (student) {
+            resolve(student);
+          } else {
+            reject('No student found with the provided ID.');
+          }
+        });
+      }
+
+      removeStudentById(id) {
+        return new Promise((resolve, reject) => {
+          const index = this.students.findIndex(student => student.id === id);
+          if (index !== -1) {
+            this.students.splice(index, 1);
+            resolve('Student has been removed from the list.');
+          } else {
+            reject('No student found with the provided ID.');
+          }
+        });
+      }
+    }
+
+    const studentManager = new StudentManager();
+
+    function addStudent() {
+      const id = parseInt(prompt('Enter student ID:'));
+      const name = prompt('Enter student name:');
+      const age = parseInt(prompt('Enter student age:'));
+
+      const student = new Student(id, name, age);
+
+      studentManager.addStudent(student)
+        .then(message => alert(message))
+        .catch(error => alert(error));
+    }
+
+    function getStudents() {
+      studentManager.getStudents()
+        .then(students => alert('Student List:\n' + JSON.stringify(students, null, 2)))
+        .catch(error => alert(error));
+    }
+
+    function findStudent() {
+      const id = parseInt(prompt('Enter student ID to find:'));
+
+      studentManager.findStudentById(id)
+        .then(student => alert('Student Information:\n' + JSON.stringify(student, null, 2)))
+        .catch(error => alert(error));
+    }
+
+    function removeStudent() {
+      const id = parseInt(prompt('Enter student ID to remove:'));
+
+      studentManager.removeStudentById(id)
+        .then(message => alert(message))
+        .catch(error => alert(error));
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+Dưới đây là mô tả chi tiết yêu cầu cho bài tập quản lý sản phẩm sử dụng Promise trong HTML:
+
+### Bài tập: Quản lý Sản phẩm
+
+#### Mục tiêu:
+- Tạo lớp `Product` để đại diện cho thông tin sản phẩm.
+- Xây dựng lớp `ProductManager` để quản lý danh sách sản phẩm.
+- Sử dụng Promise để thực hiện các hoạt động thêm, xóa, hiển thị, và tìm kiếm sản phẩm.
+
+#### Yêu cầu:
+
+1. **Tạo lớp `Product`**:
+   - Tạo một lớp có tên là `Product`.
+   - Lớp này phải có các thuộc tính: `id`, `name`, `price`, và `quantity`.
+   - Khởi tạo constructor để gán giá trị cho các thuộc tính này khi một đối tượng mới được tạo.
+
+2. **Tạo lớp `ProductManager`**:
+   - Tạo một lớp có tên là `ProductManager`.
+   - Lớp này phải có một mảng `products` để lưu danh sách sản phẩm.
+
+3. **Cài đặt các phương thức của lớp `ProductManager`**:
+   - `addProduct(product)`: Phương thức để thêm một sản phẩm vào danh sách.
+   - `getProducts()`: Phương thức để lấy danh sách sản phẩm.
+   - `findProductById(id)`: Phương thức để tìm sản phẩm theo ID.
+   - `removeProductById(id)`: Phương thức để xóa sản phẩm theo ID.
+
+4. **Tạo các hàm JavaScript và sử dụng Promise**:
+   - Tạo các hàm tương ứng với các nút trên giao diện để thực hiện các thao tác sau:
+     - Thêm sản phẩm mới.
+     - Hiển thị danh sách sản phẩm.
+     - Tìm kiếm sản phẩm theo ID.
+     - Xóa sản phẩm theo ID.
+   - Sử dụng Promise để xử lý kết quả của các phương thức trong lớp `ProductManager`.
+
+5. **Giao diện người dùng (HTML)**:
+   - Tạo một trang HTML đơn giản với các nút để thực hiện các thao tác quản lý sản phẩm.
+   - Khi người dùng nhấn vào một nút, gọi các hàm JavaScript tương ứng để thực hiện công việc và xử lý kết quả.
+
+6. **Xử lý trường hợp lỗi**:
+   - Xử lý trường hợp khi tìm kiếm hoặc xóa sản phẩm không thành công (ví dụ: không tìm thấy sản phẩm).
+
+7. **Hiển thị kết quả**:
+   - Sử dụng `alert` để hiển thị thông báo, danh sách sản phẩm hoặc thông tin sản phẩm sau mỗi thao tác.
+
+#### Hướng dẫn:
+
+1. Tạo lớp `Product` với các thuộc tính `id`, `name`, `price`, và `quantity`.
+2. Tạo lớp `ProductManager` với các phương thức `addProduct`, `getProducts`, `findProductById`, và `removeProductById`.
+3. Tạo hàm JavaScript cho mỗi nút trên giao diện để gọi các phương thức tương ứng của `ProductManager`.
+4. Sử dụng `prompt` để nhập thông tin sản phẩm từ người dùng.
+5. Sử dụng Promise để xử lý kết quả và hiển thị thông báo hoặc kết quả tương ứng.

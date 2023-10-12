@@ -1,0 +1,85 @@
+Promise là một đối tượng trong JavaScript được sử dụng để thực hiện các tác vụ bất đồng bộ và xử lý các kết quả trả về sau khi hoàn thành tác vụ đó. Promise giúp viết mã có cấu trúc rõ ràng hơn và giảm bớt callback hell (việc lồng nhiều callback).
+
+Một Promise có thể có ba trạng thái chính:
+1. Pending: Trạng thái ban đầu khi Promise đang được thực thi.
+2. Fulfilled: Trạng thái khi Promise hoàn thành thành công và trả về một giá trị.
+3. Rejected: Trạng thái khi Promise thất bại và trả về một lỗi.
+
+Promise có cú pháp như sau:
+```javascript
+const myPromise = new Promise((resolve, reject) => {
+  // Xử lý các tác vụ bất đồng bộ
+  // Nếu thành công, gọi resolve(value)
+  // Nếu thất bại, gọi reject(error)
+});
+```
+
+Có hai phương thức chính được sử dụng với Promise:
+1. `then()`: Được gọi khi Promise được hoàn thành thành công. Nhận vào một hàm callback để xử lý kết quả trả về từ Promise.
+2. `catch()`: Được gọi khi Promise bị reject (thất bại). Nhận vào một hàm callback để xử lý lỗi.
+
+Ví dụ về sử dụng Promise:
+
+```javascript
+function getData() {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      const data = "Dữ liệu từ Promise";
+      if (data) {
+        resolve(data);
+      } else {
+        reject("Không thể lấy dữ liệu");
+      }
+    }, 2000);
+  });
+}
+
+// Sử dụng Promise
+getData()
+  .then(result => {
+    console.log(result); // "Dữ liệu từ Promise"
+  })
+  .catch(error => {
+    console.error(error); // "Không thể lấy dữ liệu"
+  });
+```
+
+Trong ví dụ trên, hàm `getData` trả về một Promise. Sau 2 giây, Promise sẽ hoàn thành thành công và trả về dữ liệu "Dữ liệu từ Promise" thông qua hàm `resolve`. Nếu có lỗi xảy ra, Promise sẽ bị reject và trả về thông báo lỗi "Không thể lấy dữ liệu" thông qua hàm `reject`.
+
+Bằng cách sử dụng `then()` và `catch()`, chúng ta có thể xử lý kết quả hoặc lỗi từ Promise một cách linh hoạt và dễ đọc hơn.
+
+Cú pháp của Promise trong JavaScript như sau:
+
+```javascript
+const myPromise = new Promise((resolve, reject) => {
+  // Xử lý các tác vụ bất đồng bộ
+  
+  // Nếu thành công, gọi resolve(value)
+  // Nếu thất bại, gọi reject(error)
+});
+```
+
+Trong đó:
+- `myPromise` là biến để lưu trữ một Promise.
+- `resolve` là một hàm callback được gọi khi tác vụ bất đồng bộ hoàn thành thành công và trả về kết quả.
+- `reject` là một hàm callback được gọi khi tác vụ bất đồng bộ thất bại hoặc xảy ra lỗi.
+
+Một khi Promise được tạo, nó sẽ ở trạng thái "Pending" (đang chờ) và bắt đầu thực thi tác vụ bất đồng bộ được định nghĩa trong hàm callback.
+
+Sau đó, Promise có thể chuyển sang trạng thái "Fulfilled" (hoàn thành) nếu `resolve` được gọi và trả về kết quả. Hoặc nó có thể chuyển sang trạng thái "Rejected" (thất bại) nếu `reject` được gọi và trả về một lỗi.
+
+Để xử lý kết quả hoặc lỗi từ Promise, chúng ta sử dụng các phương thức `then()` và `catch()`:
+
+```javascript
+myPromise.then(result => {
+  // Xử lý kết quả thành công
+}).catch(error => {
+  // Xử lý lỗi
+});
+```
+
+Phương thức `then()` được gọi khi Promise hoàn thành thành công, và chúng ta có thể xử lý kết quả thành công trong hàm callback của nó.
+
+Phương thức `catch()` được gọi khi Promise thất bại hoặc xảy ra lỗi, và chúng ta có thể xử lý lỗi trong hàm callback của nó.
+
+Ngoài ra, Promise còn có các phương thức khác như `finally()` để thực hiện một tác vụ sau khi Promise hoàn thành hoặc thất bại, không phụ thuộc vào kết quả cuối cùng của Promise.

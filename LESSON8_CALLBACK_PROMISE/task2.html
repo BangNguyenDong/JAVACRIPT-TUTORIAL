@@ -1,0 +1,38 @@
+### Bài tập: Tính tổng và tích hai số sử dụng callback
+
+#### Mục tiêu:
+- Tạo giao diện người dùng cho phép người dùng nhập hai số.
+- Tính tổng và tích của hai số sử dụng callback.
+- Hiển thị kết quả tổng và tích.
+
+#### Yêu cầu:
+
+1. **Tạo giao diện người dùng (HTML)**:
+   - Tạo hai ô nhập số (`<input type="number">`) với nhãn tương ứng để người dùng có thể nhập hai số.
+   - Tạo một nút ("Tính Tổng và Tích") để người dùng có thể kích vào để tính tổng và tích.
+
+2. **Xử lý sự kiện tính toán**:
+   - Tạo một hàm JavaScript (`calculate`) được gọi khi người dùng kích vào nút "Tính Tổng và Tích".
+   - Trong hàm `calculate`, lấy giá trị từ hai ô nhập số.
+   - Gọi hàm `calculateSumAndProduct` để tính tổng và tích, và truyền vào các hàm callback để xử lý kết quả.
+
+3. **Tính tổng và tích**:
+   - Tạo một hàm JavaScript (`calculateSumAndProduct`) để tính tổng và tích của hai số.
+   - Trong hàm này, tính tổng và tích của hai số.
+   - Gọi các hàm callback để xử lý kết quả tổng và tích.
+
+4. **Hiển thị kết quả**:
+   - Tạo hai phần tử HTML (`<div>`) để hiển thị kết quả tổng và tích.
+   - Trong các hàm callback, cập nhật nội dung của hai phần tử `<div>` để hiển thị kết quả.
+
+#### Hướng dẫn:
+
+1. Tạo giao diện người dùng (HTML) với hai ô nhập số và một nút.
+2. Tạo hàm `calculate` để xử lý sự kiện khi người dùng nhấn nút.
+3. Trong hàm `calculate`, lấy giá trị từ hai ô nhập số.
+4. Gọi hàm `calculateSumAndProduct` và truyền giá trị hai số và các hàm callback.
+5. Tạo hàm `calculateSumAndProduct` để tính tổng và tích.
+6. Trong hàm `calculateSumAndProduct`, tính tổng và tích của hai số.
+7. Gọi các hàm callback và truyền kết quả.
+8. Cập nhật nội dung của phần tử `<div>` để hiển thị kết quả.
+

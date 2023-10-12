@@ -1,0 +1,51 @@
+Dưới đây là hướng dẫn từng bước theo dạng yêu cầu cho bài tập tính diện tích và chu vi hình vuông và hình chữ nhật sử dụng callback:
+
+### Bài tập: Tính diện tích và chu vi hình vuông và hình chữ nhật sử dụng callback
+
+#### Mục tiêu:
+- Tạo giao diện người dùng cho phép người dùng chọn loại hình (vuông hoặc chữ nhật) và nhập kích thước.
+- Tính diện tích và chu vi của hình vuông và hình chữ nhật sử dụng callback.
+- Hiển thị kết quả diện tích và chu vi.
+
+#### Yêu cầu:
+
+1. **Tạo giao diện người dùng (HTML)**:
+   - Tạo một ô để người dùng chọn loại hình (vuông hoặc chữ nhật).
+   - Tạo hai ô nhập kích thước (chiều dài và chiều rộng).
+   - Tạo một nút ("Tính Diện Tích và Chu Vi") để người dùng có thể kích vào để tính diện tích và chu vi.
+
+2. **Xử lý sự kiện tính toán**:
+   - Tạo một hàm JavaScript (`calculate`) được gọi khi người dùng kích vào nút "Tính Diện Tích và Chu Vi".
+   - Trong hàm `calculate`, lấy giá trị từ ô chọn loại hình và hai ô nhập kích thước.
+   - Gọi hàm `calculateAreaAndPerimeter` để tính diện tích và chu vi, và truyền vào các hàm callback để xử lý kết quả.
+
+3. **Tính diện tích và chu vi**:
+   - Tạo một hàm JavaScript (`calculateAreaAndPerimeter`) để tính diện tích và chu vi dựa vào loại hình và kích thước.
+   - Trong hàm này, tính diện tích và chu vi của hình vuông hoặc hình chữ nhật.
+   - Gọi các hàm callback để xử lý kết quả diện tích và chu vi.
+
+4. **Hiển thị kết quả**:
+   - Tạo hai phần tử HTML (`<div>`) để hiển thị kết quả diện tích và chu vi.
+   - Trong các hàm callback, cập nhật nội dung của hai phần tử `<div>` để hiển thị kết quả.
+
+#### Hướng dẫn:
+
+##### Bước 1: Tạo giao diện người dùng (HTML)
+- Tạo một ô chọn loại hình (`<select>`) với hai tùy chọn: hình vuông và hình chữ nhật.
+- Tạo hai ô nhập kích thước (chiều dài và chiều rộng) để người dùng nhập giá trị.
+- Tạo một nút "Tính Diện Tích và Chu Vi".
+
+##### Bước 2: Xử lý sự kiện tính toán (JavaScript)
+- Tạo một hàm `calculate` để xử lý sự kiện khi người dùng nhấn nút "Tính Diện Tích và Chu Vi".
+- Trong hàm `calculate`, lấy giá trị từ ô chọn loại hình và hai ô nhập kích thước.
+- Gọi hàm `calculateAreaAndPerimeter` để tính diện tích và chu vi, và truyền vào các hàm callback để xử lý kết quả.
+
+##### Bước 3: Tính diện tích và chu vi (JavaScript)
+- Tạo một hàm `calculateAreaAndPerimeter` để tính diện tích và chu vi dựa vào loại hình và kích thước.
+- Trong hàm này, tính diện tích và chu vi của hình vuông hoặc hình chữ nhật.
+- Gọi các hàm callback để xử lý kết quả diện tích và chu vi.
+
+##### Bước 4: Hiển thị kết quả (JavaScript)
+- Tạo hai phần tử HTML (`<div>`) để hiển thị kết quả diện tích và chu vi.
+- Trong các hàm callback, cập nhật nội dung của hai phần tử `<div>` để hiển thị kết quả.
+

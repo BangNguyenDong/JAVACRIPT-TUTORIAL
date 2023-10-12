@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Async Example</title>
+</head>
+<body>
+  <h1>Example with Asynchronous (Non-blocking)</h1>
+
+  <div id="output"></div>
+
+  <script>
+    function fetchDataAsync() {
+      document.getElementById('output').innerHTML += 'Start fetching data asynchronously...<br>';
+
+      return new Promise((resolve, reject) => {
+        setTimeout(() => {
+          document.getElementById('output').innerHTML += 'Data fetched successfully!<br>';
+          resolve('Data');
+        }, 3000);
+      });
+    }
+
+    document.getElementById('output').innerHTML += 'Before fetching data<br>';
+    fetchDataAsync().then((data) => {
+      document.getElementById('output').innerHTML += `After fetching data: ${data}<br>`;
+    });
+  </script>
+</body>
+</html>
