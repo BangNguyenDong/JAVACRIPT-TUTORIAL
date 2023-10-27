@@ -84,13 +84,16 @@ switch (day) {
 //Task1.5.Viết một chương trình máy tính đơn giản bao gồm các chức năng cộng, trừ, nhân và chia sử dụng cấu trúc switch case.
 //Hỏi người dùng chọn một phép tính, sau đó nhập hai số và trả về kết quả.
 
-//Task1.6. Viết một chương trình đánh giá điểm học tập dựa trên một điểm số nhập vào từ người dùng. Sử dụng cấu trúc switch case để xác định xếp loại điểm theo quy tắc sau:
+////Task1.6. Viết một chương trình đánh giá điểm học tập dựa trên 3 điểm số nhập vào từ người dùng. 
+//Sử dụng cấu trúc switch case or if else để xác định xếp loại điểm theo quy tắc sau:
+//Nhập điểm toán anh văn và ngữ văn, sau đó cộng lại rồi chia 3 để ra trung bình
+//Nếu trung bình thuộc các khoãng sau thì tạo ra alert tương ứng.
+//9-10: Xuất sắc
+//8-8.9: Giỏi
+//7-7.9: Khá
+//5-6.9: Trung bình
+//0-4.9: Yếu
 
-9-10: Xuất sắc
-8-8.9: Giỏi
-7-7.9: Khá
-5-6.9: Trung bình
-0-4.9: Yếu
 
 //Task1.7. Viết chương trình nhận vào số nguyên từ 1 đến 4, mỗi số đại diện cho một loại hình học: 1 - Hình vuông, 2 - Hình chữ nhật, 3 - Hình tam giác, 4 - Hình tròn. 
 //Dựa vào lựa chọn của người dùng, yêu cầu họ nhập các thông số liên quan (ví dụ: cạnh, chiều dài, chiều rộng, bán kính) và tính diện tích của hình tương ứng.
