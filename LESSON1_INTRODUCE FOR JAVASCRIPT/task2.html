@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.menu{
+			background-color: #333;
+			height: 50px;
+		}
+		.menu ul{
+			list-style-type: none;
+		}
+		.menu ul li{
+			float: left;
+			margin-left: 10px;
+		}
+		.menu ul li a{
+			color: #fff;
+			text-decoration: none;
+			padding: 15px;
+			display: block;
+		}
+		.menu ul li a:hover{
+			background-color: #f00;
+		}
+		#btn{
+			margin-top: 50px;
+		}
+		#btn{
+			padding: 10px 20px;
+			background-color: #f00;
+			color: #fff;
+			border: none;
+			cursor: pointer;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="menu">
+		<ul>
+			<li><a href="#">Trang chủ</a></li>
+			<li><a href="#">Giới thiệu</a></li>
+			<li><a href="#">Sản phẩm</a></li>
+			<li><a href="#">Tin tức</a></li>
+			<li><a href="#">Liên hệ</a></li>
+			<li style="float: right;"><a href="#">Giỏ hàng</a></li>
+			<li style="float: right;"><a href="#" id="count">0</a></li>
+			<!--Gia-->
+			<li style="float: right;"><a href="#" id="gia">0</a></li>
+		</ul>
+	</div>
+	<button id="btn">Mua hàng</button>
+	<!--Tạo thêm 5 button, mỗi button 1 gia khac nhau -->
+	<button id="btn1">Mua hàng 5000</button>
+	<script>
+		//Khi click vào nút mua hàng với giá tiền tương ứng thì số lượng giỏ hàng tăng lên 1 và tổng tiền tăng theo
+		//Research: document.getElementById, onclick, innerHTML
+		//Your code here
+	</script>
+</body>
+</html>
