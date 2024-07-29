@@ -1,4 +1,4 @@
-/**Đề bài: Quản lý thông tin sản phẩm**
+Đề bài: Quản lý thông tin sản phẩm
 
 1. Tạo một chương trình để quản lý thông tin sản phẩm.
 
@@ -27,10 +27,10 @@
 
 6. Thay đổi giá, mô tả và danh mục của sản phẩm:
    - Gọi các phương thức `changePrice()`, `changeDescription()` và `changeCategory()` để thay đổi thông tin của sản phẩm.
-   - In ra thông báo xác nhận thay đổi thành công.
+
 
 7. Yêu cầu kỹ thuật:
    - Sử dụng JavaScript để tạo lớp `Product` và đối tượng `Product1`.
    - Sử dụng phương thức `showInfo()` để hiển thị thông tin sản phẩm.
    - Sử dụng các phương thức `changePrice()`, `changeDescription()` và `changeCategory()` để thay đổi thông tin sản phẩm.
-   - In ra thông tin sản phẩm và kết quả xác nhận thay đổi thông tin trên console hoặc trình duyệt web. */
+   - In ra thông tin sản phẩm và kết quả xác nhận thay đổi thông tin trên console hoặc trình duyệt web. 
